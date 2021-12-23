@@ -1,8 +1,8 @@
 # CurvuDeck
 ## Requesits:
-- Pyserial
-- Python
+- [PYSERIAL](https://pypi.org/project/pyserial/#files)
+- [PYTHON](https://www.python.org/)
 ## TODO:
 - Implement running in background app.
-- Implement easy way to change location of program.
-- Implement easy way to change Serie Port.
+- Easy way to change location of program.
+- Easy way to change Serie Port.
