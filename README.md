@@ -1,7 +1,7 @@
 # CurvuDeck
 ## Requesits:
-- Pyserial.
-- Python new version.
+- Pyserial
+- Python
 ## TODO:
 - Implement running in background app.
 - Implement easy way to change location of program.
