@@ -1,11 +1,12 @@
 import subprocess
 import serial
 
-serialPort = serial.Serial('COM4', baudrate=9600, timeout=0)
+porta = 'COM4'
+serialPort = serial.Serial(porta, baudrate=9600, timeout=0)
 line = serialPort.readline().strip()
 
-red = 'C:\\Users\\Utilizador\\AppData\\Local\\Discord\\Update.exe --processStart Discord.exe'
-white = 'brave.exe'
+red = 'C:\\Users\\Utilizador\\AppData\\Local\\Discord\\Update.exe --processStart Discord.exe' # this is an example
+white = '' # Nothing will happen
 
 while True:
     line = serialPort.readline().strip()
