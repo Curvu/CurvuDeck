@@ -1,5 +1,5 @@
-# Made by Curvu
-# The things that are commented out (that are code) I'll try to use them in the future
+#! Made by Curvu
+#! The things that are commented out (that are code) I'll try to use them in the future
 import subprocess
 import serial
 '''
