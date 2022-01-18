@@ -51,4 +51,4 @@ white = ''
 findPort() ## call function to find the correct port
 while True: ## forever loop
     deck(red, white)
-serialPort.close() ## close the program
+serialPort.close() ## disconnect from serial port
