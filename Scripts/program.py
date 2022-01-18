@@ -1,3 +1,4 @@
+# Made by Curvu
 import subprocess
 import serial
 from PIL import Image
@@ -19,33 +20,33 @@ def findPort():
     global serialPort
     i = 1
     while i <= 6:
-        port = 'COM' + str(i)
+        port = 'COM' + str(i) # just switchig the port
         try:
-            serialPort = serial.Serial(port, baudrate = 9600, timeout=0)
+            serialPort = serial.Serial(port, baudrate = 9600, timeout=0) # connect to serial
             print('Serial Port Using: "%s".' % port)
-            break
+            break # if find the correct port, then break the loop
         except OSError:
             i += 1
 
 def deck(red, white):
-    line = serialPort.readline().strip()
-    if(line == b'R'):
+    line = serialPort.readline().strip() # read line from serialPort
+    if(line == b'R'): # in arduino program if i click in button red it 'Serial.println('R')
         try:
-            subprocess.call(red)
+            subprocess.call(red) # open the program
             print('Opening the red button program...')
-        except OSError:
+        except OSError: # if cant open
             print('Could not open program in the RED button')
-    if(line == b'W'):
+    if(line == b'W'): # in arduino program if i click in button white it 'Serial.println('W')
         try:
-            subprocess.call(white)
+            subprocess.call(white) # open the program
             print('Opening the white button program...')
-        except OSError:
+        except OSError: # if cant open
             print('Could not open program in the WHITE button')
 
 red = 'C:\\Users\\Utilizador\\AppData\\Local\\Discord\\Update.exe --processStart Discord.exe'
 white = ''
 
 #start_App()
-findPort()
-while True:
+findPort() # call function to find the correct port
+while True: # forever loop
     deck(red, white)
