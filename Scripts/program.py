@@ -1,20 +1,23 @@
 # Made by Curvu
 import subprocess
 import serial
-from PIL import Image
-from pystray import Icon as icon, Menu as menu, MenuItem as item
+# from PIL import Image
+# from pystray import Icon as icon, Menu as menu, MenuItem as item
 
+'''
 def start_App():
     image = Image.open(".\Scripts\icon-tray.ico")
     icon('CurvuDeck', image, menu=menu(item('Quit', stop_App), item('Show', doSomething))).run_detached()
-
+'''
 
 def doSomething():
     pass
 
+'''
 def stop_App(systray, item):
     systray.stop()
     exit()
+'''
 
 def findPort():
     global serialPort
@@ -46,7 +49,7 @@ def deck(red, white):
 red = 'C:\\Users\\Utilizador\\AppData\\Local\\Discord\\Update.exe --processStart Discord.exe'
 white = ''
 
-#start_App()
 findPort() # call function to find the correct port
 while True: # forever loop
     deck(red, white)
+serialPort.close() # close the program
