@@ -7,5 +7,5 @@
 ## After installation:
 - Open dist folder and enjoy.
 ## TODO:
-- Implement functional traysystem app. (currently not working)
+- Implement functional traysystem app.
 - Easy way to change location of program.
