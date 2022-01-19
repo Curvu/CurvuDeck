@@ -1,5 +1,6 @@
 #! @author Curvu
-#! The things that are commented out (that are code) I'll try to use them in the future
+#! The things that are commented out (that are code) I'll try to use them in the future.
+#! If you will do your own arduino program, you should use debounce the buttons. It will prevent from errors.
 import subprocess
 import serial
 '''
@@ -32,16 +33,15 @@ def findPort():
             i += 1
 
 #$ Read from serial port
-##
 def deck(red, white):
     line = serialPort.readline().strip() ## read line from serialPort
-    if(line == b'R'): ## in arduino program if i click in button red it 'Serial.println('R')
+    if(line == b'R'): ## in arduino program if i click in button red it will print "Serial.println('R')"
         try:
             subprocess.call(red)
             print('Opening the red button program...')
         except OSError:
             print('Could not open program in the RED button')
-    if(line == b'W'): ## in arduino program if i click in button white it 'Serial.println('W')
+    if(line == b'W'): ## in arduino program if i click in button white it will "Serial.println('W')"
         try:
             subprocess.call(white)
             print('Opening the white button program...')
@@ -56,4 +56,4 @@ white = ''
 findPort() ## call function to find the correct port
 while True: ## forever loop
     deck(red, white) ## call function to start reading from port
-serialPort.close() ## disconnect from serial port
+serialPort.close() ## disconnect from serial port if loop stops
