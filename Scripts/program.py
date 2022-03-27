@@ -1,6 +1,6 @@
 #! @author Curvu
 #! The things that are commented out (that are code) I'll try to use them in the future.
-#! If you will do your own arduino program, you should use debounce the buttons. It will prevent from errors.
+#! If you will do your own arduino program, you should debounce the buttons. It will prevent from errors.
 import subprocess
 import serial
 '''
