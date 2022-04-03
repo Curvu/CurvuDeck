@@ -2,8 +2,7 @@
 ## Requesits:
 - Arduino and buttons
 - [Python](https://www.python.org/)
-- After python you will need to go into cmd and `pip install pystray`
-- Also `pip install pyserial`
+- After python you will need to go into cmd and `pip install pystray` and `pip install pyserial`
 ## After installation:
 - You may create an exe but i wouldn't recommend it, but you could use any code runner instead.
 ## TODO:
