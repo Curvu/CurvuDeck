@@ -1,23 +1,8 @@
 #! @author Curvu
-#! The things that are commented out (that are code) I'll try to use them in the future.
 #! If you will do your own arduino program, you should debounce the buttons. It will prevent from errors.
 import subprocess
 import serial
-'''
-from PIL import Image
-from pystray import Icon as icon, Menu as menu, MenuItem as item
 
-def start_App():
-    image = Image.open(".\Scripts\icon-tray.ico")
-    icon('CurvuDeck', image, menu=menu(item('Quit', stop_App), item('Show', doSomething))).run_detached()
-
-def doSomething():
-    pass
-
-def stop_App(systray, item):
-    systray.stop()
-    exit()
-'''
 #$ Find the correct port
 def findPort():
     global serialPort ## global variable so i can use in the other functions
